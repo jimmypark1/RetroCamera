@@ -12,6 +12,8 @@ class ItemDataSource: NSObject  ,  UICollectionViewDataSource, UICollectionViewD
     var array:Array<String>!
 
     var parentCon:StoreViewController!
+    var parentCon2:EditViewController!
+  
     var itemDict:NSDictionary!
     var itemArray:NSArray!
 
@@ -70,6 +72,14 @@ class ItemDataSource: NSObject  ,  UICollectionViewDataSource, UICollectionViewD
         
         cell.indicator?.isHidden = false
         cell.indicator?.startAnimating()
-        parentCon.processImage(name: thumb as! String, cell:cell)
-    }
+        if parentCon != nil{
+            parentCon.processImage(name: thumb as! String, cell:cell)
+
+        }
+        else
+        {
+            parentCon2.processImage(name: thumb as! String, cell:cell)
+
+        }
+     }
 }

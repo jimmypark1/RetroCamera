@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11FE57D629E39A0800CC83B0 /* SourceMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE57D529E39A0800CC83B0 /* SourceMenuViewController.swift */; };
+		11FE57D829E3A07C00CC83B0 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE57D729E3A07C00CC83B0 /* EditViewController.swift */; };
+		11FE57DA29E3E7DE00CC83B0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FE57D929E3E7DD00CC83B0 /* Accelerate.framework */; };
 		1E171E9828169FA000CAAAD5 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E171E9728169FA000CAAAD5 /* CALayerExtension.swift */; };
 		1E171E9A2816A3A100CAAAD5 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E171E992816A3A100CAAAD5 /* IAPHelper.swift */; };
 		1E171E9C2816E29B00CAAAD5 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E171E9B2816E29B00CAAAD5 /* UIViewControllerExtension.swift */; };
@@ -63,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		01F2D96126D866ED85D341A2 /* Pods-RetroCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCamera.release.xcconfig"; path = "Target Support Files/Pods-RetroCamera/Pods-RetroCamera.release.xcconfig"; sourceTree = "<group>"; };
+		11FE57D529E39A0800CC83B0 /* SourceMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceMenuViewController.swift; sourceTree = "<group>"; };
+		11FE57D729E3A07C00CC83B0 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		11FE57D929E3E7DD00CC83B0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1E171E9728169FA000CAAAD5 /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
 		1E171E992816A3A100CAAAD5 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		1E171E9B2816E29B00CAAAD5 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E171EA02816FEC700CAAAD5 /* StoreKit.framework in Frameworks */,
+				11FE57DA29E3E7DE00CC83B0 /* Accelerate.framework in Frameworks */,
 				F036192DBA729C7F76987F42 /* Pods_RetroCamera.framework in Frameworks */,
 				1ED03437280DBE2900F00DD2 /* libjFaceLib.a in Frameworks */,
 			);
@@ -318,6 +325,8 @@
 			children = (
 				1E171EAD2817BCD100CAAAD5 /* IntroServiceInfoViewController.swift */,
 				1E753A472811A0DC00EE6D87 /* PhotoViewController.swift */,
+				11FE57D529E39A0800CC83B0 /* SourceMenuViewController.swift */,
+				11FE57D729E3A07C00CC83B0 /* EditViewController.swift */,
 				1E29A90E2848A2FF000C44BA /* CustomPopupViewController.swift */,
 				1ED0344B280EBAEC00F00DD2 /* HomeViewController.swift */,
 				1ED03455280F0C7B00F00DD2 /* StoreViewController.swift */,
@@ -342,6 +351,7 @@
 		EFEAFA3859262BEFCEC250AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11FE57D929E3E7DD00CC83B0 /* Accelerate.framework */,
 				1E171E9F2816FEC700CAAAD5 /* StoreKit.framework */,
 				86CE93FF8E4E64D6327D344B /* Pods_RetroCamera.framework */,
 			);
@@ -533,6 +543,7 @@
 				1E753A6128127FFA00EE6D87 /* ColorExtension.swift in Sources */,
 				1E171E9C2816E29B00CAAAD5 /* UIViewControllerExtension.swift in Sources */,
 				1ED03458280F14E000F00DD2 /* ItemDataSource.swift in Sources */,
+				11FE57D629E39A0800CC83B0 /* SourceMenuViewController.swift in Sources */,
 				1E753A5728122FBB00EE6D87 /* MaskDemoItemSource.swift in Sources */,
 				1ED02C95280DA36300F00DD2 /* JFaceLookupFilter.m in Sources */,
 				1ED0343C280DC52E00F00DD2 /* StickerMenuDelegate.swift in Sources */,
@@ -540,6 +551,7 @@
 				1E171EAC2817865800CAAAD5 /* UserData.swift in Sources */,
 				1ED029A3280D919D00F00DD2 /* CustomGPUImageView.m in Sources */,
 				1ED029A6280D919D00F00DD2 /* CropFilter.m in Sources */,
+				11FE57D829E3A07C00CC83B0 /* EditViewController.swift in Sources */,
 				1ED029A2280D919D00F00DD2 /* BeautyFilterGroup.m in Sources */,
 				1E29A90F2848A300000C44BA /* CustomPopupViewController.swift in Sources */,
 				1E171EA52817738700CAAAD5 /* MaskItemSource.swift in Sources */,
@@ -754,11 +766,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RetroCamera/RetroCamera.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2302181;
-				DEVELOPMENT_TEAM = V48RJ83RM5;
+				CURRENT_PROJECT_VERSION = 2304111;
+				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V48RJ83RM5;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -820,11 +832,11 @@
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/sdk/lib/ios",
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/libjFaceLib.a.download",
 				);
-				MARKETING_VERSION = 3.0.2;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.junsoft.artcamerapro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = ArtCamera_pro_DIst;
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = RetroCamera_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = RetroCamera_Dist;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RetroCamera/Filter/RetroCamera-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -841,11 +853,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RetroCamera/RetroCamera.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2302181;
-				DEVELOPMENT_TEAM = V48RJ83RM5;
+				CURRENT_PROJECT_VERSION = 2304111;
+				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V48RJ83RM5;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -907,11 +919,11 @@
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/sdk/lib/ios",
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/libjFaceLib.a.download",
 				);
-				MARKETING_VERSION = 3.0.2;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.junsoft.artcamerapro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = ArtCamera_pro_DIst;
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = RetroCamera_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = RetroCamera_Dist;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RetroCamera/Filter/RetroCamera-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

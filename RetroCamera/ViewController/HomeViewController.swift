@@ -152,19 +152,7 @@ class HomeViewController: UIViewController,GADFullScreenContentDelegate{
     override func viewWillAppear(_ animated: Bool) {
         // login check
         showSlide()
-        /*
-        Messaging.messaging().token { token, error in
-          if let error = error {
-            print("Error fetching FCM registration token: \(error)")
-          } else if let token = token {
-            print("FCM registration token: \(token)")
-           // self.fcmRegTokenMessage.text  = "Remote FCM registration token: \(token)"
-             
-           
-  
-          }
-        }
-         */
+       
         var vip0 = UserDefaults.standard.bool(forKey: "BUY_VIP0")
         var vip1 = UserDefaults.standard.bool(forKey: "BUY_VIP1")
         var vip2 = UserDefaults.standard.bool(forKey: "BUY_VIP2")
@@ -326,11 +314,15 @@ class HomeViewController: UIViewController,GADFullScreenContentDelegate{
     }
     @objc func showCamera()
     {
-        if(isCamera == false)
-        {
-            isCamera = true
-            performSegue(withIdentifier: "exec_camera", sender: nil)
-        }
+        
+       // showSouceMenu()
+        showCameraView()
+        
+//        if(isCamera == false)
+//        {
+//            isCamera = true
+//            performSegue(withIdentifier: "exec_camera", sender: nil)
+//        }
     }
     
     func initGesture()

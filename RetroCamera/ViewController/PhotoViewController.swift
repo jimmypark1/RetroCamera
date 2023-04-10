@@ -20,6 +20,84 @@ class PhotoViewController: UIViewController {
     var ratioMode:Int = 0
     @IBOutlet weak var  bannerView: GADBannerView!
    
+    var sampleBuffer: CMSampleBuffer?
+
+    
+    func processPhoto(img:UIImage){
+        
+        var photo = img//UIImage(named: "girl")
+//        photo = resizePhoto(photo, outputSize: CGSize(width: 720, height: 1280))!
+        //  self.arView.cancelSwitchEffect()
+        if let pixelBuffer = pixelBuffer(from: (photo.cgImage!)) {
+            let presentationTime = CMTimeMake(value: 10, timescale: 1000000)
+            var timingInfo = CMSampleTimingInfo(duration: CMTime.invalid,
+                                                presentationTimeStamp: presentationTime,
+                                                decodeTimeStamp: CMTime.invalid)
+            var videoInfo: CMVideoFormatDescription?
+            CMVideoFormatDescriptionCreateForImageBuffer(allocator: nil,
+                                                         imageBuffer: pixelBuffer,
+                                                         formatDescriptionOut: &videoInfo)
+            CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault,
+                                               imageBuffer: pixelBuffer,
+                                               dataReady: true,
+                                               makeDataReadyCallback: nil,
+                                               refcon: nil,
+                                               formatDescription: videoInfo!,
+                                               sampleTiming: &timingInfo,
+                                               sampleBufferOut: &sampleBuffer)
+            
+            enqueueFrame(sampleBuffer!)
+        }
+        
+    }
+    func enqueueFrame(_ sampleBuffer: CMSampleBuffer) {
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.enqueueFrame(sampleBuffer)
+        }
+    }
+    func pixelBuffer(from image: CGImage) -> CVPixelBuffer? {
+        
+        let width = image.width
+        let height = image.height
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bytesPerPixel = 4
+        let bytesPerRow = bytesPerPixel * width
+        let bitsPerComponent = 8
+        let bitmapInfo = CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue
+        
+        var pixelBuffer: CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, width, height, kCVPixelFormatType_32BGRA, nil, &pixelBuffer)
+        guard status == kCVReturnSuccess, let buffer = pixelBuffer else {
+            return nil
+        }
+        
+        CVPixelBufferLockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0))
+        let context = CGContext(data: CVPixelBufferGetBaseAddress(buffer), width: width, height: height, bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
+        context?.draw(image, in: CGRect(x: 0, y: 0, width: width, height: height))
+        CVPixelBufferUnlockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0))
+        
+        return pixelBuffer
+        
+    }
+    func resizePhoto(_ image: UIImage, outputSize: CGSize) -> UIImage? {
+        var imageRect: CGRect = .zero
+        
+        if outputSize.height / outputSize.width < image.size.height / image.size.width {
+            let height = outputSize.width * image.size.height / image.size.width
+            imageRect = CGRect(x: 0, y: (outputSize.height - height) / 2.0, width: outputSize.width, height: height)
+        } else {
+            let width = outputSize.height * image.size.width / image.size.height
+            imageRect = CGRect(x: (outputSize.width - width) / 2.0, y: 0, width: width, height: outputSize.height)
+        }
+        
+        UIGraphicsBeginImageContext(outputSize)
+        image.draw(in: imageRect)
+        let destImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return destImage
+    }
     
     func CropImage( image:UIImage , cropRect:CGRect) -> UIImage
     {
@@ -63,7 +141,8 @@ class PhotoViewController: UIViewController {
     }
     @IBAction func share()
     {
-     
+        JunSoftUtil.shared.isDetail = true
+
             let imageToShare = [image ]
             let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = shareBt // so that iPads won't crash
@@ -85,7 +164,8 @@ class PhotoViewController: UIViewController {
     @IBAction func save()
     {
       
-        
+        JunSoftUtil.shared.isDetail = true
+
         let snackbar = TTGSnackbar(message: "Saved!!!", duration: .middle)
 
         // Action 1

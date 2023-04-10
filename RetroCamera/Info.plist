@@ -188,5 +188,7 @@
 			<string>3qcr597p9d.skadnetwork</string>
 		</dict>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app requires access to your album to save photo</string>
 </dict>
 </plist>

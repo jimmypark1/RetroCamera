@@ -326,6 +326,91 @@ class StoreViewController: UIViewController {
         
    
     }
+    func downloadMaskJSON(url : String, filename : String)
+    {
+        
+        let manager = FileManager.default
+
+
+        let path = String(format: "sticker/%@", filename)
+
+        let pathUrl = dataFileURL(fileName: filename)
+
+        let destination: DownloadRequest.Destination = { _, _ in
+
+            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            documentsURL.appendPathComponent(path)
+            return (documentsURL, [.removePreviousFile])
+                           
+        }
+        if(manager.fileExists(atPath: pathUrl.path!))
+        {
+             do{
+                 try manager.removeItem(at:  pathUrl as URL)
+                 
+             } catch {
+                 print("Error: \(error.localizedDescription)")
+             }
+        }
+        AF.download(url,to:destination).responseData { [self] (_data) in
+                        
+          
+            if(_data.error != nil)
+            {
+                 
+                                 
+                return
+            }
+                  
+            var data:NSData = manager.contents(atPath: pathUrl.path!) as! NSData
+          
+            if(data.length != 0)
+            {
+                    do{
+                      
+                        self.itemAccesorys = try JSONSerialization.jsonObject(with: data as Data, options:[]) as? [String: AnyObject] as! NSDictionary
+                        
+                        
+                      //  self.dataSourceMask = MaskDelegate(items:self.masks!,owner:self)
+                        
+                      //  self.collectionView?.delegate = self.dataSourceMask
+                     //   self.collectionView?.dataSource = self.dataSourceMask
+                        
+                        let layout = UICollectionViewFlowLayout()
+                            
+                        let width = UIScreen.main.bounds.size.width
+                        layout.itemSize = CGSize(width: 60,height: 60)
+                     
+                        layout.scrollDirection = .horizontal
+                        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+                        layout.minimumLineSpacing = 15
+                   
+                        //
+                   
+                        maskSource = MaskDemoItemSource()
+                        maskSource.parentCon = self
+                        maskSource.initData(data: self.itemAccesorys!)
+                        self.collectionView?.delegate = maskSource
+                        self.collectionView?.dataSource = maskSource
+                        collectionView.setCollectionViewLayout(layout, animated: false)
+              
+                        self.collectionView?.reloadData()
+                        
+                        
+                        
+                        
+                    }catch{
+                        
+                      
+                        
+                    }
+                }
+                
+    
+        }
+    
+      
+    }
     open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
     }
@@ -592,91 +677,7 @@ class StoreViewController: UIViewController {
            downloadTask.resume()
             */
        }
-    func downloadMaskJSON(url : String, filename : String)
-    {
-        
-        let manager = FileManager.default
-
-
-        let path = String(format: "sticker/%@", filename)
-
-        let pathUrl = dataFileURL(fileName: filename)
-
-        let destination: DownloadRequest.Destination = { _, _ in
-
-            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            documentsURL.appendPathComponent(path)
-            return (documentsURL, [.removePreviousFile])
-                           
-        }
-        if(manager.fileExists(atPath: pathUrl.path!))
-        {
-             do{
-                 try manager.removeItem(at:  pathUrl as URL)
-                 
-             } catch {
-                 print("Error: \(error.localizedDescription)")
-             }
-        }
-        AF.download(url,to:destination).responseData { [self] (_data) in
-                        
-          
-            if(_data.error != nil)
-            {
-                 
-                                 
-                return
-            }
-                  
-            var data:NSData = manager.contents(atPath: pathUrl.path!) as! NSData
-          
-            if(data.length != 0)
-            {
-                    do{
-                      
-                        self.itemAccesorys = try JSONSerialization.jsonObject(with: data as Data, options:[]) as? [String: AnyObject] as! NSDictionary
-                        
-                        
-                      //  self.dataSourceMask = MaskDelegate(items:self.masks!,owner:self)
-                        
-                      //  self.collectionView?.delegate = self.dataSourceMask
-                     //   self.collectionView?.dataSource = self.dataSourceMask
-                        
-                        let layout = UICollectionViewFlowLayout()
-                            
-                        let width = UIScreen.main.bounds.size.width
-                        layout.itemSize = CGSize(width: 60,height: 60)
-                     
-                        layout.scrollDirection = .horizontal
-                        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-                        layout.minimumLineSpacing = 15
-                   
-                        //
-                   
-                        maskSource = MaskDemoItemSource()
-                        maskSource.parentCon = self
-                        maskSource.initData(data: self.itemAccesorys!)
-                        self.collectionView?.delegate = maskSource
-                        self.collectionView?.dataSource = maskSource
-                        collectionView.setCollectionViewLayout(layout, animated: false)
-              
-                        self.collectionView?.reloadData()
-                        
-                        
-                        
-                        
-                    }catch{
-                        
-                      
-                        
-                    }
-                }
-                
-    
-        }
-    
-      
-    }
+ 
     @objc func update0()
     {
         if(isCameraOn == true)

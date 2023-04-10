@@ -234,7 +234,6 @@ class ViewController: UIViewController {
          */
     }
     override func viewWillAppear(_ animated: Bool) {
-        JunSoftUtil.shared.isDetail = true
     }
     override func viewDidLoad() {
         super.viewDidLoad()

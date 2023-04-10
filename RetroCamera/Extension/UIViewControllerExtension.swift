@@ -123,4 +123,36 @@ extension UIViewController {
          */
   
     }
+    
+    func showSouceMenu()
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "SourceMenuViewController") as! SourceMenuViewController
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType(rawValue: "fade")
+        //transition.subtype = .fromRight
+       // self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+       // self.navigationController?.pushViewController(vc, animated: false)
+        self.present(vc, animated: true, completion: nil)
+  
+    }
+    
+    func showCameraView(){
+        //
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "CameraVieqController") as! ViewController
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType(rawValue: "fade")
+        //transition.subtype = .fromRight
+       // self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+       // self.navigationController?.pushViewController(vc, animated: false)
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+   
 }

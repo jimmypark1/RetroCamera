@@ -13,7 +13,8 @@ class MaskDemoItemSource: NSObject ,  UICollectionViewDataSource, UICollectionVi
       var itemArray:NSArray!
 
     var parentCon:StoreViewController!
-    
+    var parentCon2:EditViewController!
+   
     func initData(data:NSDictionary)
     {
         
@@ -66,7 +67,16 @@ class MaskDemoItemSource: NSObject ,  UICollectionViewDataSource, UICollectionVi
         cell.indicator?.isHidden = false
         cell.indicator?.startAnimating()
    
-        parentCon.processMask(item: thumb as! String, cell:cell)
+        if(parentCon != nil)
+        {
+            parentCon.processMask(item: thumb as! String, cell:cell)
+        
+        }
+        else
+        {
+            parentCon2.processMask(item: thumb as! String, cell:cell)
+        
+        }
         
         
         collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
