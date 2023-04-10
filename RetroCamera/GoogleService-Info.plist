@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>5691484609-bkp3odsfdl5b6euetu9vubj98rnpcq1q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.5691484609-bkp3odsfdl5b6euetu9vubj98rnpcq1q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAj_hTYX4j9h6nsYJtct-vQw9tAYbjUjfI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>5691484609</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.junsoft.artcamerapro</string>
+	<key>PROJECT_ID</key>
+	<string>artcamera-ccc0e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>artcamera-ccc0e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:5691484609:ios:e558b7218e7beb48afa740</string>
+	<key>DATABASE_URL</key>
+	<string>https://artcamera-ccc0e.firebaseio.com</string>
+</dict>
+</plist>

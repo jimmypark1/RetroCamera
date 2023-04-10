@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Heavy.ttf">
+            <string>Lato-Heavy</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qRh-M2-ev8" customClass="CustomOverlay" customModule="RetroCamera" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMw-dt-lF7">
+                    <rect key="frame" x="10" y="40" width="345" height="31"/>
+                    <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="16"/>
+                    <state key="normal" title="Skip">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thy-MX-zfS">
+                    <rect key="frame" x="100" y="543" width="175" height="44"/>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.29019607843137252" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8YY-OW-YtE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nzm-rP-scd">
+                    <rect key="frame" x="10" y="607" width="355" height="26"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nzm-rP-scd" firstAttribute="top" secondItem="thy-MX-zfS" secondAttribute="bottom" constant="20" id="5Gb-H7-CnU"/>
+                <constraint firstAttribute="trailing" secondItem="thy-MX-zfS" secondAttribute="trailing" constant="100" id="Ag1-sO-gdA"/>
+                <constraint firstAttribute="trailing" secondItem="Nzm-rP-scd" secondAttribute="trailing" constant="10" id="BIT-9Z-Yuk"/>
+                <constraint firstAttribute="bottom" secondItem="thy-MX-zfS" secondAttribute="bottom" constant="80" id="Jcv-qU-GVN"/>
+                <constraint firstItem="Nzm-rP-scd" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="10" id="JiP-0X-nls"/>
+                <constraint firstItem="aMw-dt-lF7" firstAttribute="top" secondItem="qRh-M2-ev8" secondAttribute="top" constant="40" id="Tpw-MV-U78"/>
+                <constraint firstAttribute="trailing" secondItem="aMw-dt-lF7" secondAttribute="trailing" constant="20" id="VcU-xR-tDj"/>
+                <constraint firstItem="aMw-dt-lF7" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="10" id="Z2I-Rd-sye"/>
+                <constraint firstItem="thy-MX-zfS" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="100" id="e1M-W6-TiA"/>
+            </constraints>
+            <connections>
+                <outlet property="buttonContinue" destination="thy-MX-zfS" id="eab-t6-TUu"/>
+                <outlet property="contentControl" destination="Nzm-rP-scd" id="SaZ-bd-1oF"/>
+                <outlet property="skip" destination="aMw-dt-lF7" id="etN-kZ-H2E"/>
+            </connections>
+            <point key="canvasLocation" x="498.39999999999998" y="54.422788605697157"/>
+        </view>
+    </objects>
+</document>

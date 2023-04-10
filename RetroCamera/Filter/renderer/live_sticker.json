@@ -1,0 +1,1530 @@
+{"item":[
+  {
+    "name":"d2_ear","thumb":"thumb_d2","update":false,
+    "accesory": {
+      "ear": {
+        "name": "d2_ear",
+        "bound": 5,
+        "w_ratio": 1.45,
+        "h_ratio": 0.65
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "d2_nose",
+        "bound": 3,
+        "w_ratio": 0.5,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "n_g10",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"c_ear","thumb":"thumb_cat2","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "c_ear",
+        "bound": 5,
+        "w_ratio": 1.0,
+        "h_ratio": 0.65
+      },
+      "earring": {
+        "name": "a9_earing",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "c_nose0",
+        "bound": 1,
+        "w_ratio": 0.5,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "wonder_t",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.35,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"dog_ear","thumb":"thumb_dog","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "dog_ear",
+        "bound": 6,
+        "w_ratio": 1.0,
+        "h_ratio": 0.55
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "dog_nose",
+        "bound": 10,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "n_g1",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"cat_ear0","thumb":"thumb_dog","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "cat_ear",
+        "bound": 4,
+        "w_ratio": 1.0,
+        "h_ratio": 0.55
+      },
+      "earring": {
+        "name": "a9_earing",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "cat_nose",
+        "bound": 4,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "h",
+        "bound": 10,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 33,
+        "w_x1": 42,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 0,
+        "s_y": 0,
+        "s_x_ratio": 1.3,
+        "s_y_ratio": 0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+      },
+      "etc2": {
+        "name": "h",
+        "bound": 10,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 33,
+        "w_x1": 42,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 32,
+        "s_y": 32,
+        "s_x_ratio": -1.3,
+        "s_y_ratio": 0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      }
+    }
+  },
+  {
+    "name":"new_angel_girl","thumb":"thumb_cat0","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 4,
+        "w_ratio": 1.0,
+        "h_ratio": 0.55
+      },
+      "earring": {
+        "name": "a9_earing",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "n_cat_nose",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "f_crown",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 0.55,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "a_butterfly",
+        "bound": 36,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": -1.0,
+        "z0": 0,
+        "z1": 0,
+        "mirrored": false
+
+      }
+    }
+  },
+  {
+    "name":"pirate","thumb":"thumb_pirate","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 4,
+        "w_ratio": 1.0,
+        "h_ratio": 0.55
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "pirat_hat",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 0.55,
+        "rule":1
+
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "g_a",
+        "bound": 5,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 0,
+        "s_y": 67,
+        "s_x_ratio": 1.0,
+        "s_y_ratio": 1.0,
+        "z0": 0,
+        "z1": 0,
+        "mirrored": false
+
+      }
+    ,
+      "etc2": {
+        "name": "e_patch",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 1.0,
+        "w_x0": 92,
+        "w_x1": 105,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 171,
+        "s_y": 171,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": 0.0,
+        "z0": 171,
+        "z1": 171,
+        "mirrored": false
+
+      }
+    }
+  },
+  {
+    "name":"a_f","thumb":"thumb_af","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "d_e",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "d_n",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 0.55,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "a_f",
+        "bound": 20,
+        "w_ratio": 3.0,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": -2.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      }
+    }
+  },
+  {
+    "name":"hat9","thumb":"thumb1_13","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "s_g0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "e_hat0",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.85,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"hat8","thumb":"thumb1_14","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "s_g0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "w_hat2",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 0.9,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"hat7","thumb":"thumb1_15","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "w_hat1",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 0.9,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"hat6","thumb":"thumb1_16","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "s_g1",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "w_hat0",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 0.9,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"hat5","thumb":"thumb1_17","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear1",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "a2_g0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "a3_hat2",
+        "bound": 1,
+        "w_ratio": 1.35,
+        "h_ratio": 0.55,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"hat4","thumb":"thumb1_18","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear1",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "s_g0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "a3_hat1",
+        "bound": 1,
+        "w_ratio": 1.65,
+        "h_ratio": 0.55,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"hat3","thumb":"thumb1_19","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "a2_g0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "a3_hat0",
+        "bound": 1,
+        "w_ratio": 2.45,
+        "h_ratio": 0.38,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"glasses2","thumb":"thumb1_12","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.25
+      },
+      "earring": {
+        "name": "a_ear0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "a_hat",
+        "bound": 15,
+        "w_ratio": 1.25,
+        "h_ratio": 0.78,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "eyeL",
+        "bound": 5,
+        "w_ratio": 1.7,
+        "h_ratio": 1.0,
+        "w_x0": 11,
+        "w_x1": 67,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 155,
+        "s_y": 95,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": 0.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      },
+      "etc2": {
+        "name": "eyeR",
+        "bound": 5,
+        "w_ratio": 1.7,
+        "h_ratio": 1.0,
+        "w_x0": 11,
+        "w_x1": 67,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 172,
+        "s_y": 108,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": 0.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      }
+    }
+  },
+  {
+    "name":"love","thumb":"thumb1_0","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "ear",
+        "bound": 14,
+        "w_ratio": 1.35,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "bunny",
+        "bound": 24,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 15,
+        "w_ratio": 1.25,
+        "h_ratio": 0.78,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "love",
+        "bound": 13,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 70,
+        "h_y1": 16,
+        "s_x": 16,
+        "s_y": 16,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": 1.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": true
+
+      }
+    }
+  },
+  {
+    "name":"glasses","thumb":"thumb1_1","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "g",
+        "bound": 16,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.25,
+        "h_ratio": 0.78,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"round_glasses","thumb":"thumb1_2","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "rg",
+        "bound": 5,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.25,
+        "h_ratio": 0.78,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"bird","thumb":"thumb1_3","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "nose",
+        "bound": 24,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.25,
+        "h_ratio": 0.78,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "bird",
+        "bound": 7,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 93,
+        "w_x1": 105,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": -1.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      }
+    }
+  },
+  {
+    "name":"fire","thumb":"thumb1_4","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.25,
+        "h_ratio": 0.78,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "angry",
+        "bound": 4,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 93,
+        "w_x1": 105,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": -0.8,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": true
+
+      },
+      "etc2": {
+        "name": "fire",
+        "bound": 6,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 93,
+        "w_x1": 105,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": 0.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      }
+    }
+  },
+  {
+    "name":"bling","thumb":"thumb1_5","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "f",
+        "bound": 3,
+        "w_ratio": 1.25,
+        "h_ratio": 0.3,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "angel",
+        "bound": 3,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 93,
+        "w_x1": 105,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": -0.8,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      },
+      "etc2": {
+        "name": "neck",
+        "bound": 3,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 70,
+        "h_y1": 16,
+        "s_x": 16,
+        "s_y": 16,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": 0.75,
+        "z0": 16,
+        "z1": 16,
+        "mirrored": false
+
+      },
+      "etc3": {
+        "name": "micky",
+        "bound": 3,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 93,
+        "w_x1": 105,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 32,
+        "s_y": 16,
+        "s_x_ratio": -0.5,
+        "s_y_ratio": 0.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      },
+      "etc4": {
+        "name": "ilove",
+        "bound": 3,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 93,
+        "w_x1": 105,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 0,
+        "s_y": 16,
+        "s_x_ratio": 0.5,
+        "s_y_ratio": 0.0,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": true
+
+      }
+
+    }
+  },
+  {
+    "name":"tiara","thumb":"thumb1_6","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "tiara",
+        "bound": 3,
+        "w_ratio": 1.25,
+        "h_ratio": 0.55,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+
+    }
+  },
+  {
+    "name":"crown","thumb":"thumb1_7","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "crown",
+        "bound": 3,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.25,
+        "s_y_ratio": -0.9,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      }
+
+    }
+  },
+  {
+    "name":"new","thumb":"thumb1_8","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.25,
+        "h_ratio": 0.55,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "new",
+        "bound": 2,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": -0.85,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": true
+
+      }
+
+    }
+  },
+  {
+    "name":"crown2","thumb":"thumb1_9","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 24,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "crown2_",
+        "bound": 6,
+        "w_ratio": 1.25,
+        "h_ratio": 0.55,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+
+    }
+  },
+  {
+    "name":"crown3","thumb":"thumb1_10","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 24,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "f_c",
+        "bound": 3,
+        "w_ratio": 1.25,
+        "h_ratio": 0.25,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+
+    }
+  },
+  {
+    "name":"angel","thumb":"thumb1_11","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.60
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 24,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 0.8,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.25,
+        "h_ratio": 0.55,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "angel2_",
+        "bound": 26,
+        "w_ratio": 0.7,
+        "h_ratio": 1.0,
+        "w_x0": 0,
+        "w_x1": 32,
+        "h_y0": 67,
+        "h_y1": 16,
+        "s_x": 67,
+        "s_y": 67,
+        "s_x_ratio": 0.0,
+        "s_y_ratio": -0.85,
+        "z0": 67,
+        "z1": 67,
+        "mirrored": false
+
+      }
+
+    }
+  }
+]}

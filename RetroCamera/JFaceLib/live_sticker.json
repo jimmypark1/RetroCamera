@@ -1,0 +1,245 @@
+{"item":[
+  {
+    "name":"d2_ear","thumb":"s_thumb0","update":false,
+    "accesory": {
+      "ear": {
+        "name": "d2_ear",
+        "bound": 5,
+        "w_ratio": 1.45,
+        "h_ratio": 0.65
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "d2_nose",
+        "bound": 3,
+        "w_ratio": 0.5,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "n_g10",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"d1_ear","thumb":"s_thumb1","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "d1_ear0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.45
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "d1_nose0",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.35,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"b_ear","thumb":"s_thumb2","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "b_ear0",
+        "bound": 1,
+        "w_ratio": 1.5,
+        "h_ratio": 0.65
+      },
+      "earring": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "b_nose0",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0,
+        "rule":0
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"n_hat","thumb":"thumb_dog","update":false,
+    "accesory": {
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "earring": {
+        "name": "n_ear4",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 4,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "gla7",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "f_c0",
+        "bound": 1,
+        "w_ratio": 1.3,
+        "h_ratio": 0.35,
+        "rule": 1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  },
+  {
+    "name":"n_hat2","thumb":"thumb_cat0","update":false,
+    "accesory": {
+
+      "ear": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.55
+      },
+      "earring": {
+        "name": "n_ear5",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "nose": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "glass": {
+        "name": "gla1",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "hat": {
+        "name": "wonder_t",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 0.25,
+        "rule":1
+      },
+      "mustache": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      },
+      "etc": {
+        "name": "none",
+        "bound": 1,
+        "w_ratio": 1.0,
+        "h_ratio": 1.0
+      }
+    }
+  }
+]}
