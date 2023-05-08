@@ -156,7 +156,8 @@ class ViewController: UIViewController {
      var bClick:Bool!
      
      var bReward:Bool!
-    
+    var sampleBuffer: CMSampleBuffer?
+
     lazy var activityIndicator: UIActivityIndicatorView = {
         // Create an indicator.
         let activityIndicator = UIActivityIndicatorView()
@@ -201,37 +202,7 @@ class ViewController: UIViewController {
       
         jFaceLookup = LookupFilterGroup()
       
-        /*
-        self.frontCamera = GPUImageStillCamera(sessionPreset: AVCaptureSession.Preset.vga640x480.rawValue, cameraPosition: .front)
-        self.frontCamera!.outputImageOrientation = .portrait;
-        self.frontCamera!.horizontallyMirrorFrontFacingCamera = true
-        
-        self.backCamera = GPUImageStillCamera(sessionPreset: AVCaptureSession.Preset.vga640x480.rawValue, cameraPosition: .back)
-        self.backCamera!.outputImageOrientation = .portrait;
-        
-        
-        
-        let rect:CGRect =  self.view.bounds
-        self.bottomMargin?.constant = rect.size.height - 1.25 * rect.size.width
-        self.topMargin?.constant = 0
-        
-        if(self.bFront == true)
-        {
-            self.videoCamera = self.frontCamera
-            
-        }
-        else
-        {
-            self.videoCamera = self.backCamera
-            
-        }
-        self.framerate = (self.videoCamera!.inputCamera.activeFormat.videoSupportedFrameRateRanges[0] as AnyObject).maxFrameRate as Float64
-        
-        self.fov = self.videoCamera?.inputCamera.activeFormat.videoFieldOfView
-        self.scene = Scene()
-        
-        self.ret = self.scene?.initSDKFrameRate(Float(self.framerate!), fov:self.fov!,size:CGSize(width: 640, height: 480))
-         */
+      
     }
     override func viewWillAppear(_ animated: Bool) {
     }
@@ -286,8 +257,89 @@ class ViewController: UIViewController {
              
         initSDK()
     }
+    func pixelBuffer(from image: CGImage) -> CVPixelBuffer? {
+        
+        let width = image.width
+        let height = image.height
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bytesPerPixel = 4
+        let bytesPerRow = bytesPerPixel * width
+        let bitsPerComponent = 8
+        let bitmapInfo = CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue
+        
+        var pixelBuffer: CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, width, height, kCVPixelFormatType_32BGRA, nil, &pixelBuffer)
+        guard status == kCVReturnSuccess, let buffer = pixelBuffer else {
+            return nil
+        }
+        
+        CVPixelBufferLockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0))
+        let context = CGContext(data: CVPixelBufferGetBaseAddress(buffer), width: width, height: height, bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo)
+        context?.draw(image, in: CGRect(x: 0, y: 0, width: width, height: height))
+        CVPixelBufferUnlockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0))
+        
+        return pixelBuffer
+        
+    }
+    func resizePhoto(_ image: UIImage, outputSize: CGSize) -> UIImage? {
+        var imageRect: CGRect = .zero
+        
+        if outputSize.height / outputSize.width < image.size.height / image.size.width {
+            let height = outputSize.width * image.size.height / image.size.width
+            imageRect = CGRect(x: 0, y: (outputSize.height - height) / 2.0, width: outputSize.width, height: height)
+        } else {
+            let width = outputSize.height * image.size.width / image.size.height
+            imageRect = CGRect(x: (outputSize.width - width) / 2.0, y: 0, width: width, height: outputSize.height)
+        }
+        
+        UIGraphicsBeginImageContext(outputSize)
+        image.draw(in: imageRect)
+        let destImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return destImage
+    }
+    func deleteBuffer()
+    {
+        if sampleBuffer != nil{
+            CMSampleBufferInvalidate(sampleBuffer!)
 
-    
+        }
+        
+    }
+    func processPhoto(img:UIImage){
+        var photo = resizePhoto(img, outputSize: CGSize(width: 720, height: 1280))!
+           
+        if let pixelBuffer = pixelBuffer(from: (photo.cgImage!)) {
+            let presentationTime = CMTimeMake(value: 10, timescale: 1000000)
+            var timingInfo = CMSampleTimingInfo(duration: CMTime.invalid,
+                                                presentationTimeStamp: presentationTime,
+                                                decodeTimeStamp: CMTime.invalid)
+            var videoInfo: CMVideoFormatDescription?
+            CMVideoFormatDescriptionCreateForImageBuffer(allocator: nil,
+                                                         imageBuffer: pixelBuffer,
+                                                         formatDescriptionOut: &videoInfo)
+            CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault,
+                                               imageBuffer: pixelBuffer,
+                                               dataReady: true,
+                                               makeDataReadyCallback: nil,
+                                               refcon: nil,
+                                               formatDescription: videoInfo!,
+                                               sampleTiming: &timingInfo,
+                                               sampleBufferOut: &sampleBuffer)
+            
+            enqueueFrame(sampleBuffer!)
+        }
+        
+    }
+    func enqueueFrame(_ sampleBuffer: CMSampleBuffer) {
+        
+        
+//        deepAR.enqueueCameraFrame(sampleBuffer, mirror: false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.enqueueFrame(sampleBuffer)
+        }
+    }
+    //
     @objc func close()
     {
         videoCamera?.delegate = nil
@@ -735,16 +787,7 @@ class ViewController: UIViewController {
       
                
            }
-        /*
-           videoCamera?.captureSession.commitConfiguration()
-           videoCamera?.captureSession.startRunning()
-           
-           videoCamera?.resumeCameraCapture()
-           */
-        //   initCamera()
-           //videoCamera?.delegate = self
-           //videoCamera?.startCapture()
-           //oldRatioMode = ratioMode
+       
         
         initCamera()
         
@@ -831,7 +874,7 @@ class ViewController: UIViewController {
             self.timer0 = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.update0), userInfo: nil, repeats: true)
       
          
-       
+            processPhoto(img: UIImage(named: "test")!)
    
           
         }
@@ -2625,7 +2668,84 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : GPUImageVideoCameraDelegate{
-    
+    func convertImageToSampleBuffer(image: UIImage) -> CMSampleBuffer? {
+        
+        
+        if let pixelBuffer = pixelBuffer(from: (photo.cgImage!)) {
+              var videoInfo: CMVideoFormatDescription?
+            CMVideoFormatDescriptionCreateForImageBuffer(allocator: nil,
+                                                         imageBuffer: pixelBuffer,
+                                                         formatDescriptionOut: &videoInfo)
+            CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault,
+                                               imageBuffer: pixelBuffer,
+                                               dataReady: true,
+                                               makeDataReadyCallback: nil,
+                                               refcon: nil,
+                                               formatDescription: videoInfo!,
+                                               sampleTiming: &timingInfo,
+                                               sampleBufferOut: &sampleBuffer)
+        }
+        // Create a CGImage from the UIImage
+//        guard let cgImage = image.cgImage else {
+//            return nil
+//        }
+//
+//        // Calculate the image size
+//        let width = cgImage.width
+//        let height = cgImage.height
+//
+//        // Create a dictionary with the pixel format type
+//        let pixelBufferAttributes: [String: Any] = [
+//            kCVPixelBufferCGImageCompatibilityKey as String: true,
+//            kCVPixelBufferCGBitmapContextCompatibilityKey as String: true,
+//            kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32ARGB
+//        ]
+//
+//        var pixelBuffer: CVPixelBuffer?
+//        let status = CVPixelBufferCreate(kCFAllocatorDefault,
+//                                         width,
+//                                         height,
+//                                         kCVPixelFormatType_32ARGB,
+//                                         pixelBufferAttributes as CFDictionary,
+//                                         &pixelBuffer)
+//        guard status == kCVReturnSuccess, let pixelBuffer = pixelBuffer else {
+//            return nil
+//        }
+//
+//        CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+//
+//        // Create a CGContext to draw the image
+//        let context = CGContext(data: CVPixelBufferGetBaseAddress(pixelBuffer),
+//                                width: width,
+//                                height: height,
+//                                bitsPerComponent: 8,
+//                                bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer),
+//                                space: CGColorSpaceCreateDeviceRGB(),
+//                                bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue)!
+//
+//        // Draw the image into the CGContext
+//        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+//
+//        CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+//
+//        // Create a CMSampleBuffer from the CVPixelBuffer
+//        var sampleBuffer: CMSampleBuffer?
+//        var timingInfo = CMSampleTimingInfo(duration: CMTimeMake(value: 1, timescale: 30), presentationTimeStamp: CMTime.zero, decodeTimeStamp: CMTime.invalid)
+//        let status2 = CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault,
+//                                                         imageBuffer: pixelBuffer,
+//                                                         dataReady: true,
+//                                                         makeDataReadyCallback: nil,
+//                                                         refcon: nil,
+//                                                         formatDescription: CMTimeRangeMake(start: CMTime.zero, duration: CMTimeMake(value: 1, timescale: 30)) as! CMVideoFormatDescription,
+//                                                         sampleTiming: &timingInfo,
+//                                                         sampleBufferOut: &sampleBuffer)
+//
+//        guard status2 == noErr, let buffer = sampleBuffer else {
+//            return nil
+//        }
+//
+//        return buffer
+    }
     func willOutputSampleBuffer(_ sampleBuffer: CMSampleBuffer!) {
         
        
@@ -2634,7 +2754,10 @@ extension ViewController : GPUImageVideoCameraDelegate{
         deviceOrientation =  UIDevice.current.orientation;
         
      
-        scene!.processBuffer(sampleBuffer, orientation: Int32(deviceOrientation.rawValue), front: bFront!)
+        self.sampleBuffer = sampleBuffer
+//        processPhoto(img: UIImage(named: "test")!)
+        self.sampleBuffer = convertImageToSampleBuffer(image: UIImage(named: "test")!)
+        scene!.processBuffer(self.sampleBuffer, orientation: Int32(deviceOrientation.rawValue), front: bFront!)
 
         
         isCameraOn = true
