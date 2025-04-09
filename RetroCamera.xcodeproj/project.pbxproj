@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1131B5142D59801F0049C42A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131B5132D59801F0049C42A /* Constants.swift */; };
+		1131B5172D598EE70049C42A /* ImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131B5162D598EE70049C42A /* ImageUtility.swift */; };
+		1131B5192D5B05990049C42A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131B5182D5B05990049C42A /* OnBoardingViewController.swift */; };
+		1131B51B2D5B06480049C42A /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131B51A2D5B06480049C42A /* SubscribeViewController.swift */; };
+		1131B51E2D5B20610049C42A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1131B51D2D5B20610049C42A /* Localizable.xcstrings */; };
+		1131B5202D5C1BB60049C42A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131B51F2D5C1BB60049C42A /* Utility.swift */; };
+		11EB73F12DA5F68D0095E190 /* AdMobOpenAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB73F02DA5F68D0095E190 /* AdMobOpenAdManager.swift */; };
 		11FE57D629E39A0800CC83B0 /* SourceMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE57D529E39A0800CC83B0 /* SourceMenuViewController.swift */; };
 		11FE57D829E3A07C00CC83B0 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE57D729E3A07C00CC83B0 /* EditViewController.swift */; };
 		11FE57DA29E3E7DE00CC83B0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FE57D929E3E7DD00CC83B0 /* Accelerate.framework */; };
@@ -21,7 +28,6 @@
 		1E171EAC2817865800CAAAD5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E171EAB2817865800CAAAD5 /* UserData.swift */; };
 		1E171EAE2817BCD100CAAAD5 /* IntroServiceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E171EAD2817BCD100CAAAD5 /* IntroServiceInfoViewController.swift */; };
 		1E29A90F2848A300000C44BA /* CustomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29A90E2848A2FF000C44BA /* CustomPopupViewController.swift */; };
-		1E52F6922864A05F0039ADB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E52F6902864A05F0039ADB9 /* Localizable.strings */; };
 		1E52F6BC2864A3470039ADB9 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52F6BB2864A3470039ADB9 /* StringExtention.swift */; };
 		1E753A4228118A4900EE6D87 /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E753A4128118A4900EE6D87 /* FilterData.swift */; };
 		1E753A4428118A6500EE6D87 /* FilterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E753A4328118A6500EE6D87 /* FilterSource.swift */; };
@@ -66,6 +72,13 @@
 
 /* Begin PBXFileReference section */
 		01F2D96126D866ED85D341A2 /* Pods-RetroCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCamera.release.xcconfig"; path = "Target Support Files/Pods-RetroCamera/Pods-RetroCamera.release.xcconfig"; sourceTree = "<group>"; };
+		1131B5132D59801F0049C42A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1131B5162D598EE70049C42A /* ImageUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtility.swift; sourceTree = "<group>"; };
+		1131B5182D5B05990049C42A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		1131B51A2D5B06480049C42A /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		1131B51D2D5B20610049C42A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1131B51F2D5C1BB60049C42A /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		11EB73F02DA5F68D0095E190 /* AdMobOpenAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobOpenAdManager.swift; sourceTree = "<group>"; };
 		11FE57D529E39A0800CC83B0 /* SourceMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceMenuViewController.swift; sourceTree = "<group>"; };
 		11FE57D729E3A07C00CC83B0 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		11FE57D929E3E7DD00CC83B0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -83,46 +96,6 @@
 		1E29A90E2848A2FF000C44BA /* CustomPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupViewController.swift; sourceTree = "<group>"; };
 		1E52F68E28649F790039ADB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E52F68F28649F790039ADB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1E52F6912864A05F0039ADB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6942864A0980039ADB9 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6952864A0AA0039ADB9 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6962864A0B20039ADB9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6972864A0C10039ADB9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6982864A0ED0039ADB9 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6992864A0F50039ADB9 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F69A2864A0FD0039ADB9 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F69B2864A1040039ADB9 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F69C2864A10B0039ADB9 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F69D2864A1110039ADB9 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F69E2864A1170039ADB9 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F69F2864A11D0039ADB9 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6A02864A1230039ADB9 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A12864A1290039ADB9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A22864A12F0039ADB9 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6A32864A1350039ADB9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A42864A13B0039ADB9 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A52864A1410039ADB9 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A62864A1470039ADB9 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A72864A14C0039ADB9 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A82864A1520039ADB9 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6A92864A1580039ADB9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6AA2864A15D0039ADB9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6AB2864A1630039ADB9 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6AC2864A1690039ADB9 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6AD2864A16F0039ADB9 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6AE2864A1760039ADB9 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6AF2864A17C0039ADB9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6B02864A1820039ADB9 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6B12864A1870039ADB9 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6B22864A18E0039ADB9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6B32864A1950039ADB9 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6B42864A19B0039ADB9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6B52864A1A10039ADB9 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1E52F6B62864A1A80039ADB9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6B72864A1AE0039ADB9 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6B82864A1B40039ADB9 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6B92864A1BB0039ADB9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E52F6BA2864A1C10039ADB9 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E52F6BB2864A3470039ADB9 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
 		1E753A4128118A4900EE6D87 /* FilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
 		1E753A4328118A6500EE6D87 /* FilterSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSource.swift; sourceTree = "<group>"; };
@@ -193,6 +166,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1131B5122D5980090049C42A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1131B5132D59801F0049C42A /* Constants.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1131B5152D598ECD0049C42A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				1131B5162D598EE70049C42A /* ImageUtility.swift */,
+				1131B51F2D5C1BB60049C42A /* Utility.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		1E171EA6281785CD00CAAAD5 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +235,8 @@
 		1ED02972280D81A200F00DD2 /* RetroCamera */ = {
 			isa = PBXGroup;
 			children = (
+				1131B5152D598ECD0049C42A /* util */,
+				1131B5122D5980090049C42A /* UI */,
 				1E171EA12816FECD00CAAAD5 /* RetroCamera.entitlements */,
 				1E753A5F28127FD600EE6D87 /* Extension */,
 				1E753A4028118A3300EE6D87 /* Model */,
@@ -256,7 +248,7 @@
 				1ED02973280D81A200F00DD2 /* AppDelegate.swift */,
 				1ED02977280D81A200F00DD2 /* ViewController.swift */,
 				1ED02979280D81A200F00DD2 /* Main.storyboard */,
-				1E52F6902864A05F0039ADB9 /* Localizable.strings */,
+				1131B51D2D5B20610049C42A /* Localizable.xcstrings */,
 				1E171E9D2816E43900CAAAD5 /* Login.storyboard */,
 				1ED0297C280D81A400F00DD2 /* Assets.xcassets */,
 				1ED0297E280D81A400F00DD2 /* LaunchScreen.storyboard */,
@@ -327,6 +319,9 @@
 				1E753A472811A0DC00EE6D87 /* PhotoViewController.swift */,
 				11FE57D529E39A0800CC83B0 /* SourceMenuViewController.swift */,
 				11FE57D729E3A07C00CC83B0 /* EditViewController.swift */,
+				11EB73F02DA5F68D0095E190 /* AdMobOpenAdManager.swift */,
+				1131B5182D5B05990049C42A /* OnBoardingViewController.swift */,
+				1131B51A2D5B06480049C42A /* SubscribeViewController.swift */,
 				1E29A90E2848A2FF000C44BA /* CustomPopupViewController.swift */,
 				1ED0344B280EBAEC00F00DD2 /* HomeViewController.swift */,
 				1ED03455280F0C7B00F00DD2 /* StoreViewController.swift */,
@@ -379,6 +374,8 @@
 				1ED0296D280D81A200F00DD2 /* Frameworks */,
 				1ED0296E280D81A200F00DD2 /* Resources */,
 				8C8CFA0BE5CA36898F3D6B32 /* [CP] Embed Pods Frameworks */,
+				B5A65403FAB51691D32796BE /* [CP] Copy Pods Resources */,
+				1131B51C2D5B17140049C42A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -472,7 +469,7 @@
 				1ED02C97280DA7A100F00DD2 /* model.bf2 in Resources */,
 				1ED0345E280F9E0000F00DD2 /* vline.json in Resources */,
 				1ED0345D280F9E0000F00DD2 /* bigeyes.json in Resources */,
-				1E52F6922864A05F0039ADB9 /* Localizable.strings in Resources */,
+				1131B51E2D5B20610049C42A /* Localizable.xcstrings in Resources */,
 				1ED03446280E87E100F00DD2 /* GoogleService-Info.plist in Resources */,
 				1ED0297D280D81A400F00DD2 /* Assets.xcassets in Resources */,
 				1ED0297B280D81A200F00DD2 /* Main.storyboard in Resources */,
@@ -483,6 +480,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1131B51C2D5B17140049C42A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		8C8CFA0BE5CA36898F3D6B32 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,6 +541,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B5A65403FAB51691D32796BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetroCamera/Pods-RetroCamera-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetroCamera/Pods-RetroCamera-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetroCamera/Pods-RetroCamera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -538,17 +574,21 @@
 				1E753A46281197BB00EE6D87 /* FiterItemSource.swift in Sources */,
 				1E52F6BC2864A3470039ADB9 /* StringExtention.swift in Sources */,
 				1ED03441280DCA6500F00DD2 /* StickerDelegate.swift in Sources */,
+				1131B51B2D5B06480049C42A /* SubscribeViewController.swift in Sources */,
 				1ED03451280EF95A00F00DD2 /* FilterCell.swift in Sources */,
 				1ED02C91280DA36300F00DD2 /* Scene.mm in Sources */,
+				1131B5142D59801F0049C42A /* Constants.swift in Sources */,
 				1E753A6128127FFA00EE6D87 /* ColorExtension.swift in Sources */,
 				1E171E9C2816E29B00CAAAD5 /* UIViewControllerExtension.swift in Sources */,
 				1ED03458280F14E000F00DD2 /* ItemDataSource.swift in Sources */,
+				1131B5202D5C1BB60049C42A /* Utility.swift in Sources */,
 				11FE57D629E39A0800CC83B0 /* SourceMenuViewController.swift in Sources */,
 				1E753A5728122FBB00EE6D87 /* MaskDemoItemSource.swift in Sources */,
 				1ED02C95280DA36300F00DD2 /* JFaceLookupFilter.m in Sources */,
 				1ED0343C280DC52E00F00DD2 /* StickerMenuDelegate.swift in Sources */,
 				1E171EAE2817BCD100CAAAD5 /* IntroServiceInfoViewController.swift in Sources */,
 				1E171EAC2817865800CAAAD5 /* UserData.swift in Sources */,
+				1131B5172D598EE70049C42A /* ImageUtility.swift in Sources */,
 				1ED029A3280D919D00F00DD2 /* CustomGPUImageView.m in Sources */,
 				1ED029A6280D919D00F00DD2 /* CropFilter.m in Sources */,
 				11FE57D829E3A07C00CC83B0 /* EditViewController.swift in Sources */,
@@ -561,6 +601,7 @@
 				1E753A5E28127B8E00EE6D87 /* MyPageSettingsCell.swift in Sources */,
 				1E171E9A2816A3A100CAAAD5 /* IAPHelper.swift in Sources */,
 				1ED03454280EFAC100F00DD2 /* FilterDemoDataSource.swift in Sources */,
+				11EB73F12DA5F68D0095E190 /* AdMobOpenAdManager.swift in Sources */,
 				1ED0345A280F15A300F00DD2 /* ItemCell.swift in Sources */,
 				1ED02C93280DA36300F00DD2 /* SDKManager.mm in Sources */,
 				1ED03456280F0C7B00F00DD2 /* StoreViewController.swift in Sources */,
@@ -570,59 +611,13 @@
 				1ED02974280D81A200F00DD2 /* AppDelegate.swift in Sources */,
 				1E171EAA2817860E00CAAAD5 /* JunSoftUtil.swift in Sources */,
 				1E753A4428118A6500EE6D87 /* FilterSource.swift in Sources */,
+				1131B5192D5B05990049C42A /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1E52F6902864A05F0039ADB9 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E52F6912864A05F0039ADB9 /* Base */,
-				1E52F6942864A0980039ADB9 /* ca */,
-				1E52F6952864A0AA0039ADB9 /* zh-HK */,
-				1E52F6962864A0B20039ADB9 /* zh-Hans */,
-				1E52F6972864A0C10039ADB9 /* zh-Hant */,
-				1E52F6982864A0ED0039ADB9 /* ar */,
-				1E52F6992864A0F50039ADB9 /* hr */,
-				1E52F69A2864A0FD0039ADB9 /* cs */,
-				1E52F69B2864A1040039ADB9 /* da */,
-				1E52F69C2864A10B0039ADB9 /* nl */,
-				1E52F69D2864A1110039ADB9 /* en-AU */,
-				1E52F69E2864A1170039ADB9 /* en-IN */,
-				1E52F69F2864A11D0039ADB9 /* en-GB */,
-				1E52F6A02864A1230039ADB9 /* fi */,
-				1E52F6A12864A1290039ADB9 /* fr */,
-				1E52F6A22864A12F0039ADB9 /* fr-CA */,
-				1E52F6A32864A1350039ADB9 /* de */,
-				1E52F6A42864A13B0039ADB9 /* el */,
-				1E52F6A52864A1410039ADB9 /* he */,
-				1E52F6A62864A1470039ADB9 /* hi */,
-				1E52F6A72864A14C0039ADB9 /* hu */,
-				1E52F6A82864A1520039ADB9 /* id */,
-				1E52F6A92864A1580039ADB9 /* it */,
-				1E52F6AA2864A15D0039ADB9 /* ja */,
-				1E52F6AB2864A1630039ADB9 /* ko */,
-				1E52F6AC2864A1690039ADB9 /* ms */,
-				1E52F6AD2864A16F0039ADB9 /* nb */,
-				1E52F6AE2864A1760039ADB9 /* pl */,
-				1E52F6AF2864A17C0039ADB9 /* pt-BR */,
-				1E52F6B02864A1820039ADB9 /* pt-PT */,
-				1E52F6B12864A1870039ADB9 /* ro */,
-				1E52F6B22864A18E0039ADB9 /* ru */,
-				1E52F6B32864A1950039ADB9 /* sk */,
-				1E52F6B42864A19B0039ADB9 /* es */,
-				1E52F6B52864A1A10039ADB9 /* es-419 */,
-				1E52F6B62864A1A80039ADB9 /* sv */,
-				1E52F6B72864A1AE0039ADB9 /* th */,
-				1E52F6B82864A1B40039ADB9 /* tr */,
-				1E52F6B92864A1BB0039ADB9 /* uk */,
-				1E52F6BA2864A1C10039ADB9 /* vi */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		1ED02979280D81A200F00DD2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -699,6 +694,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -753,6 +749,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -766,10 +763,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RetroCamera/RetroCamera.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2304111;
-				DEVELOPMENT_TEAM = V48RJ83RM5;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2504092;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V48RJ83RM5;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -817,7 +816,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -830,10 +829,11 @@
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/sdk/lib/ios",
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/libjFaceLib.a.download",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.junsoft.artcamerapro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = RetroCamera_Dist;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RetroCamera/Filter/RetroCamera-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -850,10 +850,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RetroCamera/RetroCamera.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2304111;
-				DEVELOPMENT_TEAM = V48RJ83RM5;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2504092;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V48RJ83RM5;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -901,7 +903,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -914,10 +916,11 @@
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/sdk/lib/ios",
 					"$(PROJECT_DIR)/RetroCamera/JFaceLib/libjFaceLib.a.download",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.junsoft.artcamerapro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = RetroCamera_Dist;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RetroCamera/Filter/RetroCamera-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -12,12 +12,13 @@ import GPUImage
 import SwiftyStoreKit
 import StoreKit
 import SafariServices
+import SnapKit
 
-class StoreViewController: UIViewController {
+class StoreViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var imgView:UIImageView!
-    @IBOutlet weak var collectionView:UICollectionView!
-    @IBOutlet weak var renderView: GPUImageView?
+    var collectionView:UICollectionView!
+    var renderView: GPUImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var termsLabel: UITextView!
@@ -42,13 +43,13 @@ class StoreViewController: UIViewController {
     
     var type:Int = 0
     //
-    var videoCamera:GPUImageStillCamera?
-     var frontCamera:GPUImageStillCamera?
+    var videoCamera:GPUImageVideoCamera?
+     var frontCamera:GPUImageVideoCamera?
      
-     var frontCamera0:GPUImageStillCamera?
-     var frontCamera1:GPUImageStillCamera?
+     var frontCamera0:GPUImageVideoCamera?
+     var frontCamera1:GPUImageVideoCamera?
      
-     var front480Camera:GPUImageStillCamera?
+     var front480Camera:GPUImageVideoCamera?
      var backCamera:GPUImageStillCamera?
      var filter: GPUImageFilter?
      var beautyFilterGroup: BeautyFilterGroup?
@@ -112,6 +113,16 @@ class StoreViewController: UIViewController {
         return activityIndicator
     
      }()
+    let topView = UIView()
+    let titleView = UILabel()
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView(frame: .zero)
+        scrollView.delegate = self
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 6.0
+        view.addSubview(scrollView)
+        return scrollView
+    }()
     func getProduct()
     {
         var producrId = "com.junsoft.retro.sticker"
@@ -264,51 +275,89 @@ class StoreViewController: UIViewController {
       
       
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    func setupBackButton() {
+        // 백 버튼을 설정 (Chevron 아이콘, 텍스트 없음)
+        let appearance = UINavigationBarAppearance()
+        //        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = Constants.topBar1//UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1.0) // 투명 배경
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white] // 타이틀 텍스트 색상
+        appearance.shadowImage = UIImage()
+        //        appearance.shadowColor = .black
+        
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+  
+        let backButton = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.backward"), // 시스템 Chevron 아이콘 사용
+            style: .plain,
+            target: self,
+            action: #selector(backButtonTapped)
+        )
+        backButton.tintColor = .white // 아이콘 색상을 검정색으로 설정
+        
+        // 백 버튼 텍스트 제거
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    @objc func backButtonTapped(){
+        self.navigationController?.popViewController(animated: true) // 네비게이션 스택에서 이전
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBackButton()
+        self.navigationController?.isNavigationBarHidden = false
         self.view.addSubview(self.activityIndicator)
 
         initGesture()
         initSDK()
         filters = NSMutableArray()
+        initUI()
          
-        titleLabel.text = titleStr
+//        titleLabel.text = titleStr
         
-        priceFrame.layer.cornerRadius = 10
-        priceFrame.layer.borderWidth = 1
-        priceFrame.layer.borderColor = UIColor(hex:"62afe2").cgColor
-   //     priceFrame.backgroundColor = UIColor(hex:"EDFFFB")
+//        priceFrame.layer.cornerRadius = 10
+//        priceFrame.layer.borderWidth = 1
+//        priceFrame.layer.borderColor = UIColor(hex:"62afe2").cgColor
         
         
-        let shadowOffset1 = CGSize(width: 2, height: 2.0)
-        activityIndicator.startAnimating()
-        subscribeBt.layer.addShadow(shadowOffset: shadowOffset1, opacity: 0.2, radius: 10, shadowColor: UIColor.black)
-    
-        
-        subscribeBt.setTitle("Add to Lens".localized, for: .normal)
-        getProduct()
+//        let shadowOffset1 = CGSize(width: 2, height: 2.0)
+//        activityIndicator.startAnimating()
+//        subscribeBt.layer.addShadow(shadowOffset: shadowOffset1, opacity: 0.2, radius: 10, shadowColor: UIColor.black)
+//    
+//        
+//        subscribeBt.setTitle("Add to Lens".localized, for: .normal)
+//        getProduct()
   
         if(type == 0)
         {
+            titleView.text = "AI Face Sticker Filter"
              let json = "http://www.junsoft.org/stickers/live_sticker.json"
             
-            desc.text = "Try the filter lenses beforehand.These filter lenses make the new you stand out or make you cute.Would you like to apply that filter lens?".localized
+//            desc.text = "Try the filter lenses beforehand.These filter lenses make the new you stand out or make you cute.Would you like to apply that filter lens?".localized
             downloadJSON(url: json,filename: "live_sticker.json")
         
         }
         else if(type == 1)
         {
+            titleView.text = "Color Lookup Filter"
+
            // let json = "http://www.junsoft.org/stickers/live_sticker.json"
             
             //downloadJSON(url: json,filename: "live_sticker.json")
-            desc.text = "Retro Camera captures you beautifully, lovingly, warmly, and sometimes vintage. check it out now".localized
+//            desc.text = "Retro Camera captures you beautifully, lovingly, warmly, and sometimes vintage. check it out now".localized
             makeFilterList()
         }
         else
         {
+            titleView.text = "Face Swap Filter"
+
             let json = "http://www.junsoft.org/mask/mask.json"
             
-            desc.text = "Find another face of yours!Sometimes handsome and beautiful...Sometimes it's fun!!!Would you like to apply that Swap lens?".localized
+//            desc.text = "Find another face of yours!Sometimes handsome and beautiful...Sometimes it's fun!!!Would you like to apply that Swap lens?".localized
             downloadMaskJSON(url: json,filename: "mask.json")
            
             //downloadJSON(url: json,filename: "live_sticker.json")
@@ -318,13 +367,135 @@ class StoreViewController: UIViewController {
      
         //
         
-       // let json = "http://www.junsoft.org/stickers/live_sticker.json"
         
-       renderView?.layer.cornerRadius = 10
-       renderView?.layer.masksToBounds = true
+//       renderView?.layer.cornerRadius = 10
+//       renderView?.layer.masksToBounds = true
   
         
    
+    }
+    @objc func closeTapped(){
+        dismiss(animated: false)
+    }
+    func initUI(){
+       
+        self.view.backgroundColor = Constants.mediumBlue7
+  
+        let back = UIButton()
+        back.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+        back.setImage(UIImage(systemName: "xmark")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        back.tintColor = .white
+//        back.backgroundColor = .white
+        topView.addSubview(back)
+        back.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview().inset(16)
+            make.width.height.equalTo(24)
+        }
+        titleView.textColor = Constants.titleColor
+        topView.addSubview(titleView)
+        titleView.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+            
+        }
+        topView.backgroundColor = .clear//Constants.topBar1//.white
+        self.view.addSubview(topView)
+        topView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)//.offset(50)
+            
+            make.height.equalTo(64)
+        }
+        let frameView = UIView(frame: .zero)
+        frameView.backgroundColor = .clear
+//        frameView.clipsToBounds = true
+//        frameView.layer.cornerRadius = 5
+        
+        frameView.layer.shadowColor = UIColor.white.cgColor
+        frameView.layer.shadowOpacity = 0.3
+        frameView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        frameView.layer.shadowRadius = 10
+   
+        
+        self.view.addSubview(frameView)
+        frameView.snp.makeConstraints { make in
+            make.top.equalTo(topView.snp.bottom).offset(16)
+            make.leading.equalToSuperview().inset(16)
+            make.width.height.equalTo(UIScreen.main.bounds.size.width -  32)
+        }
+        
+        renderView = GPUImageView(frame: .zero)
+        frameView.addSubview(renderView)
+        renderView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+        }
+        //
+        var colors = [CGColor]()
+     
+        colors.append(UIColor.clear.cgColor)
+        colors.append(UIColor.black.cgColor)
+     
+        let gradientLayer = CAGradientLayer()
+       
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0) // 상단
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)   // 하단
+        gradientLayer.locations = [0.7]
+        gradientLayer.frame = CGRectMake(0, 0 , UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.width)//headerImageView.bounds
+ 
+//        renderView.layer.insertSublayer(gradientLayer, at: 3)
+        //
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 10
+  
+        
+        //56 + 18 + 8
+        let width = UIScreen.main.bounds.size.width
+        layout.itemSize = CGSize(width: 60,height: 60)
+     
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(ItemCell.self, forCellWithReuseIdentifier: "ItemCell")
+//        collectionView.layer.cornerRadius = 5
+        collectionView.clipsToBounds = true
+        collectionView.backgroundColor = .clear
+        
+        self.view.addSubview(collectionView)
+      
+        collectionView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(frameView.snp.bottom).offset(20)
+            make.height.equalTo(60)
+        }
+        
+        let msg = "Try the filter lenses beforehand.These filter lenses make the new you stand out or make you cute.Would you like to apply that filter lens?".localized
+        
+        let label = UILabel()
+        label.text = msg
+        label.textColor = Constants.yellow0
+        label.font = UIFont(name: "Helvetica", size: 13)
+        label.numberOfLines = 0
+        self.view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(collectionView.snp.bottom).offset(20)
+        }
+        let subscribeBt = Utility.createPlanButton(title: "Add to Lens".localized)
+        subscribeBt.addTarget(self, action: #selector(suscribeButtonTapped), for: .touchUpInside)
+        self.view.addSubview(subscribeBt)
+        
+        subscribeBt.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(label.snp.bottom).offset(20)
+            make.height.equalTo(60)
+        }
+        
+    }
+    @objc func suscribeButtonTapped(){
+        openCart()
     }
     func downloadMaskJSON(url : String, filename : String)
     {
@@ -416,23 +587,23 @@ class StoreViewController: UIViewController {
     }
     func initGesture()
     {
-        let tapGesture0 = UITapGestureRecognizer(target: self, action: #selector(showTerms))
-        termsBt.isUserInteractionEnabled = true
-        termsBt.addGestureRecognizer(tapGesture0)
-      
-        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(showPrivacy))
-        privacyBt.isUserInteractionEnabled = true
-        privacyBt.addGestureRecognizer(tapGesture1)
-    
-        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(restorePurchase))
-        restoreBt.isUserInteractionEnabled = true
-        restoreBt.addGestureRecognizer(tapGesture2)
+//        let tapGesture0 = UITapGestureRecognizer(target: self, action: #selector(showTerms))
+//        termsBt.isUserInteractionEnabled = true
+//        termsBt.addGestureRecognizer(tapGesture0)
+//      
+//        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(showPrivacy))
+//        privacyBt.isUserInteractionEnabled = true
+//        privacyBt.addGestureRecognizer(tapGesture1)
+//    
+//        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(restorePurchase))
+//        restoreBt.isUserInteractionEnabled = true
+//        restoreBt.addGestureRecognizer(tapGesture2)
     
     }
     func showSafariViewController(_ url: URL) {
         
             let svc = SFSafariViewController(url: url)
-            svc.preferredControlTintColor = UIColor.init(red: 180, green: 180, blue: 180)
+//            svc.preferredControlTintColor = UIColor.init(red: 180, green: 180, blue: 180)
             self.present(svc, animated: true, completion: nil)
         
         
@@ -716,17 +887,17 @@ class StoreViewController: UIViewController {
           
         }
         
-        subscribeBt.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-                UIView.animate(withDuration: 0.7, // your duration
-                               delay: 0,
-                               usingSpringWithDamping: 0.2,
-                               initialSpringVelocity: 6.0,
-                               animations: { [self] in
-                    subscribeBt.transform = .identity
-                    },
-                               completion: { _ in
-                                // Implement your awesome logic here.
-                })
+//        subscribeBt.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+//                UIView.animate(withDuration: 0.7, // your duration
+//                               delay: 0,
+//                               usingSpringWithDamping: 0.2,
+//                               initialSpringVelocity: 6.0,
+//                               animations: { [self] in
+//                    subscribeBt.transform = .identity
+//                    },
+//                               completion: { _ in
+//                                // Implement your awesome logic here.
+//                })
        
     }
     func setTexture(name:String, filterName:String, thumb:String, type:String, category:String)

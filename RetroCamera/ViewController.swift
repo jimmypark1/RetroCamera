@@ -109,14 +109,14 @@ class ViewController: UIViewController {
     var bVip = false
     var filterSource:FilterSource!
  
-    var videoCamera:GPUImageStillCamera?
-     var frontCamera:GPUImageStillCamera?
+    var videoCamera:GPUImageVideoCamera?
+     var frontCamera:GPUImageVideoCamera?
      
-     var frontCamera0:GPUImageStillCamera?
-     var frontCamera1:GPUImageStillCamera?
+     var frontCamera0:GPUImageVideoCamera?
+     var frontCamera1:GPUImageVideoCamera?
      
-     var front480Camera:GPUImageStillCamera?
-     var backCamera:GPUImageStillCamera?
+     var front480Camera:GPUImageVideoCamera?
+     var backCamera:GPUImageVideoCamera?
      var filter: GPUImageFilter?
      var beautyFilterGroup: BeautyFilterGroup?
      var cropFilter: CropFilter?
@@ -1216,7 +1216,7 @@ class ViewController: UIViewController {
             renderView?.fillMode = kGPUImageFillModePreserveAspectRatioAndFill;
  
             jFaceLookup?.addTarget(renderView)
-            videoCamera?.addTarget(jFaceLookup )
+            videoCamera?.addTarget(jFaceLookup)
             
         }
         else
@@ -1867,47 +1867,74 @@ class ViewController: UIViewController {
     @IBAction func showFilter()
     {
         
+        self.captureBt?.isHidden = true
+        self.filterBt?.isHidden = true
+        self.stickerBt?.isHidden = true
         
-        let vip0 = UserDefaults.standard.bool(forKey: "BUY_VIP0")
-        var vip1 = UserDefaults.standard.bool(forKey: "BUY_VIP1")
-        let vip2 = UserDefaults.standard.bool(forKey: "BUY_VIP2")
-        var isVip = false
+        self.stickerView?.isHidden = false
+        self.menuView?.isHidden = false
         
-       // vip1 = true
-        if(vip1 == true)
-        {
-            self.captureBt?.isHidden = true
-            self.filterBt?.isHidden = true
-            self.stickerBt?.isHidden = true
-            
-            self.stickerView?.isHidden = false
-            self.menuView?.isHidden = false
-            
-            self.menuOrg?.isHidden  = false
-            self.menuItem?.isHidden  = false
-            
-            self.filterMenuView?.isHidden = true
-            self.filterView?.isHidden = true
-            self.swapBt.isHidden = true
-            
-          //  self.segmentedControl.isHidden = true
-            
-            
-            
-            self.indicator?.isHidden = false
-            
-            self.indicator?.startAnimating()
-            
-            self.stickerMenuSource = StickerMenuDelegate(owner: self)
-            
-            self.menuView?.delegate = self.stickerMenuSource
-            self.menuView?.dataSource = self.stickerMenuSource
-            makeFilterList()
-        }
-        else
-        {
-            showStore0(type: 1)
-        }
+        self.menuOrg?.isHidden  = false
+        self.menuItem?.isHidden  = false
+        
+        self.filterMenuView?.isHidden = true
+        self.filterView?.isHidden = true
+        self.swapBt.isHidden = true
+        
+      //  self.segmentedControl.isHidden = true
+        
+        
+        
+        self.indicator?.isHidden = false
+        
+        self.indicator?.startAnimating()
+        
+        self.stickerMenuSource = StickerMenuDelegate(owner: self)
+        
+        self.menuView?.delegate = self.stickerMenuSource
+        self.menuView?.dataSource = self.stickerMenuSource
+        makeFilterList()
+//
+//        let vip0 = UserDefaults.standard.bool(forKey: "BUY_VIP0")
+//        var vip1 = UserDefaults.standard.bool(forKey: "BUY_VIP1")
+//        let vip2 = UserDefaults.standard.bool(forKey: "BUY_VIP2")
+//        var isVip = false
+//        
+//       // vip1 = true
+//        if(vip1 == true)
+//        {
+//            self.captureBt?.isHidden = true
+//            self.filterBt?.isHidden = true
+//            self.stickerBt?.isHidden = true
+//            
+//            self.stickerView?.isHidden = false
+//            self.menuView?.isHidden = false
+//            
+//            self.menuOrg?.isHidden  = false
+//            self.menuItem?.isHidden  = false
+//            
+//            self.filterMenuView?.isHidden = true
+//            self.filterView?.isHidden = true
+//            self.swapBt.isHidden = true
+//            
+//          //  self.segmentedControl.isHidden = true
+//            
+//            
+//            
+//            self.indicator?.isHidden = false
+//            
+//            self.indicator?.startAnimating()
+//            
+//            self.stickerMenuSource = StickerMenuDelegate(owner: self)
+//            
+//            self.menuView?.delegate = self.stickerMenuSource
+//            self.menuView?.dataSource = self.stickerMenuSource
+//            makeFilterList()
+//        }
+//        else
+//        {
+//            showStore0(type: 1)
+//        }
         
        
     }
@@ -2668,23 +2695,23 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : GPUImageVideoCameraDelegate{
-    func convertImageToSampleBuffer(image: UIImage) -> CMSampleBuffer? {
+//    func convertImageToSampleBuffer(image: UIImage) -> CMSampleBuffer? {
         
         
-        if let pixelBuffer = pixelBuffer(from: (photo.cgImage!)) {
-              var videoInfo: CMVideoFormatDescription?
-            CMVideoFormatDescriptionCreateForImageBuffer(allocator: nil,
-                                                         imageBuffer: pixelBuffer,
-                                                         formatDescriptionOut: &videoInfo)
-            CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault,
-                                               imageBuffer: pixelBuffer,
-                                               dataReady: true,
-                                               makeDataReadyCallback: nil,
-                                               refcon: nil,
-                                               formatDescription: videoInfo!,
-                                               sampleTiming: &timingInfo,
-                                               sampleBufferOut: &sampleBuffer)
-        }
+//        if let pixelBuffer = pixelBuffer(from: (image.cgImage!)) {
+//              var videoInfo: CMVideoFormatDescription?
+//            CMVideoFormatDescriptionCreateForImageBuffer(allocator: nil,
+//                                                         imageBuffer: pixelBuffer,
+//                                                         formatDescriptionOut: &videoInfo)
+//            CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault,
+//                                               imageBuffer: pixelBuffer,
+//                                               dataReady: true,
+//                                               makeDataReadyCallback: nil,
+//                                               refcon: nil,
+//                                               formatDescription: videoInfo!,
+//                                               sampleTiming: &timingInfo,
+//                                               sampleBufferOut: &sampleBuffer)
+//        }
         // Create a CGImage from the UIImage
 //        guard let cgImage = image.cgImage else {
 //            return nil
@@ -2745,7 +2772,7 @@ extension ViewController : GPUImageVideoCameraDelegate{
 //        }
 //
 //        return buffer
-    }
+//    }
     func willOutputSampleBuffer(_ sampleBuffer: CMSampleBuffer!) {
         
        
@@ -2756,7 +2783,10 @@ extension ViewController : GPUImageVideoCameraDelegate{
      
         self.sampleBuffer = sampleBuffer
 //        processPhoto(img: UIImage(named: "test")!)
-        self.sampleBuffer = convertImageToSampleBuffer(image: UIImage(named: "test")!)
+//        self.sampleBuffer = convertImageToSampleBuffer(image: UIImage(named: "test")!)
+//        let pixelBuffer = ImageUtility.buffer(from: UIImage(named: "d0")!)
+              
+//        func convertUIImageToCMSampleBuffer(image: UIImage)
         scene!.processBuffer(self.sampleBuffer, orientation: Int32(deviceOrientation.rawValue), front: bFront!)
 
         
@@ -2765,7 +2795,7 @@ extension ViewController : GPUImageVideoCameraDelegate{
         
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
 }

@@ -51,33 +51,31 @@ extension UIViewController {
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(withIdentifier: "StoreViewController") as! StoreViewController
+//        let vc = storyboard.instantiateViewController(withIdentifier: "StoreViewController") as! StoreViewController
+        let vc = SubscribeViewController()
       
-        vc.type = type
-        
-        if(type == 0)
-        {
-            vc.titleStr = "Face AI Sticker Lens"
-  
-        }
-        if(type == 1)
-        {
-            vc.titleStr = "Color Lookup Lens"
-  
-        }
-        if(type == 2)
-        {
-            vc.titleStr = "Face AI Swap Lens"
-  
-        }
+//        vc.type = type
+//        
+//        if(type == 0)
+//        {
+//            vc.titleStr = "Face AI Sticker Lens"
+//  
+//        }
+//        if(type == 1)
+//        {
+//            vc.titleStr = "Color Lookup Lens"
+//  
+//        }
+//        if(type == 2)
+//        {
+//            vc.titleStr = "Face AI Swap Lens"
+//  
+//        }
         
           let transition = CATransition()
         transition.duration = 0.3
         transition.type = CATransitionType(rawValue: "fade")
-   //     transition.subtype = .fromRight
-       // self.navigationController?.view.layer.add(transition, forKey: kCATransition)
-      //  self.navigationController?.pushViewController(vc, animated: false)
-
+  
         self.present(vc, animated: true, completion: nil)
   
     }

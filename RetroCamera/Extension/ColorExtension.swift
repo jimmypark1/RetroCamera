@@ -32,10 +32,10 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
     
-    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1) {
-        self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: alpha)
-    }
-    
+//    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1) {
+//        self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: alpha)
+//    }
+//    
     func toHexString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0

@@ -29,7 +29,7 @@ class EditViewController: UIViewController, GPUImageVideoCameraDelegate {
     var scene:Scene?
     var jFaceLookup:LookupFilterGroup?
     var itemAccesorys:NSDictionary?
-    var videoCamera:GPUImageStillCamera?
+    var videoCamera:GPUImageVideoCamera?
     var filter:GPUImageFilter?
 
     

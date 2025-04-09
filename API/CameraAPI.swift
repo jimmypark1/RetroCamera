@@ -11,23 +11,23 @@ import Hue
 
 class CameraAPI{
     static let shared = CameraAPI()
-    var videoCamera:GPUImageStillCamera?
+    var videoCamera:GPUImageVideoCamera?
      
-    var frontCamera:GPUImageStillCamera?
+    var frontCamera:GPUImageVideoCamera?
     
   
-    var backCamera:GPUImageStillCamera?
+    var backCamera:GPUImageVideoCamera?
     var scene:Scene?
     var framerate:Float64?
     var fov:Float?
     var bFront :Bool = true
    
     private init(){
-        self.frontCamera = GPUImageStillCamera(sessionPreset: AVCaptureSession.Preset.vga640x480.rawValue, cameraPosition: .front)
+        self.frontCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.vga640x480.rawValue, cameraPosition: .front)
         self.frontCamera!.outputImageOrientation = .portrait;
         self.frontCamera!.horizontallyMirrorFrontFacingCamera = true
         
-        self.backCamera = GPUImageStillCamera(sessionPreset: AVCaptureSession.Preset.vga640x480.rawValue, cameraPosition: .back)
+        self.backCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.vga640x480.rawValue, cameraPosition: .back)
         self.backCamera!.outputImageOrientation = .portrait;
         
         if(bFront == true)
@@ -63,7 +63,7 @@ class CameraAPI{
         return scene
     }
     
-    func getVideoCamera() -> GPUImageStillCamera?
+    func getVideoCamera() -> GPUImageVideoCamera?
     {
         return videoCamera
     }

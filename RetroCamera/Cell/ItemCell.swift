@@ -8,8 +8,38 @@
 import UIKit
 
 class ItemCell: UICollectionViewCell {
-    @IBOutlet weak var img:UIImageView!
+    var img:UIImageView!
     
-    @IBOutlet weak var indicator:UIActivityIndicatorView?
+    var indicator:UIActivityIndicatorView!
    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        // Set up background image view
+        img = UIImageView(frame: self.bounds)
+        img.contentMode = .scaleAspectFill
+        img.layer.cornerRadius = 5
+        img.clipsToBounds = true
+        contentView.addSubview(img)
+        img.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.width.height.equalTo(60)
+        }
+        indicator = UIActivityIndicatorView(style: .white)
+        indicator.frame = self.bounds
+        indicator.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.addSubview(indicator)
+        
+        indicator.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+            make.width.height.equalTo(20)
+        }
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
 }
