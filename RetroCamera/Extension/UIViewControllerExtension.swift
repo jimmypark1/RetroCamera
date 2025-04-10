@@ -71,7 +71,9 @@ extension UIViewController {
 //            vc.titleStr = "Face AI Swap Lens"
 //  
 //        }
-        
+        vc.modalPresentationStyle = .fullScreen  // 전체 화면으로 설정
+        vc.modalTransitionStyle = .crossDissolve  // 슬라이드로 올라오는 애니메이션 설정
+  
           let transition = CATransition()
         transition.duration = 0.3
         transition.type = CATransitionType(rawValue: "fade")
