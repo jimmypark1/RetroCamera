@@ -764,8 +764,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RetroCamera/RetroCamera.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2504102;
+				CURRENT_PROJECT_VERSION = 2504103;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V48RJ83RM5;
 				ENABLE_BITCODE = NO;
@@ -850,8 +851,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RetroCamera/RetroCamera.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JunSoft Mobile Inc. (V48RJ83RM5)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2504102;
+				CURRENT_PROJECT_VERSION = 2504103;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V48RJ83RM5;
 				ENABLE_BITCODE = NO;

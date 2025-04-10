@@ -1807,9 +1807,10 @@ class ViewController: UIViewController {
     {
         
         var vip2 = UserDefaults.standard.bool(forKey: "BUY_VIP2")
-       
-       // vip2 =  true
-        if(vip2 == true)
+        var vip = UserDefaults.standard.bool(forKey: "BUY_VIP")
+      
+//        vip2 =  true
+        if(vip2 == true || vip == true)
         {
             UIView.animate(withDuration: 0.25) {
                 self.bSticker = true
@@ -1941,10 +1942,11 @@ class ViewController: UIViewController {
     @IBAction func showSticker(){
         
         var vip0 = UserDefaults.standard.bool(forKey: "BUY_VIP0")
-        
-      //  vip0 = true
+        var vip = UserDefaults.standard.bool(forKey: "BUY_VIP")
+      
+//        vip = true
           
-        if(vip0 == true)
+        if(vip0 == true || vip == true)
         {
             UIView.animate(withDuration: 0.25) {
                 self.bSticker = true

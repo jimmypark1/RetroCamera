@@ -134,10 +134,16 @@ class PhotoViewController: UIViewController {
 //            let img = image
 //            bottom.constant = UIScreen.main.bounds.size.height - height
 //        }
-//        
-        bannerView.adUnitID = "ca-app-pub-7915959670508279/8457567696"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+//
+        var bBuyVIP:Bool = UserDefaults.standard.bool(forKey: "BUY_VIP")
+    
+//        bBuyVIP = true
+        if bBuyVIP == false{
+            bannerView.adUnitID = "ca-app-pub-7915959670508279/8457567696"
+            bannerView.rootViewController = self
+            bannerView.load(GADRequest())
+        }
+        
     }
     @IBAction func share()
     {
@@ -178,7 +184,7 @@ class PhotoViewController: UIViewController {
         snackbar.frame.size.height = 34
         snackbar.contentInset = UIEdgeInsets(top: 10, left: 14, bottom: 10, right: 14)
       
-        snackbar.backgroundColor = UIColor(red: 68, green: 68, blue: 68, alpha: 1.0)
+//        snackbar.backgroundColor = UIColor(red: 68, green: 68, blue: 68, alpha: 1.0)
       
         
         snackbar.dismissBlock = { [self] (snackbar) in

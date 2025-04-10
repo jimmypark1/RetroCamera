@@ -148,7 +148,7 @@ class FilterSource: NSObject ,  UICollectionViewDataSource, UICollectionViewDele
 
       
         
-        var bBuyVIP:Bool = UserDefaults.standard.bool(forKey: "BUY_VIP")
+//        var bBuyVIP:Bool = UserDefaults.standard.bool(forKey: "BUY_VIP")
         cell.indicator?.isHidden = true
         
       //  cell.indicator?.color = UIColor(red: 243.0/255.0, green: 188.0/255.0, blue: 81.0/255.0, alpha: 1.0)
